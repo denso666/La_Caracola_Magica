@@ -1,15 +1,18 @@
 {
-  "name": "La_Caracola_Magica",
+  "name": "la-caracola-magica",
+  "product_name": "La caracola magica",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "electron src/index.js"
+    "start": "electron main.js",
+    "package-linux": "electron-packager . la-caracola-magica --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^10.1.5"
+    "electron": "^10.1.5",
+    "electron-packager": "^15.1.0"
   }
 }
