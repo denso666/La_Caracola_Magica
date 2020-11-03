@@ -16,6 +16,7 @@ function createWindow() {
 
     mainWindow.removeMenu()
     mainWindow.loadFile('index.html')
+    require('child_process').exec("./env/configure-env.sh $(whoami)")
 }
 
 app.whenReady().then(createWindow);
